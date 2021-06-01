@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/styles.css" type="text/css"/>
+  
+  <title>To do Application</title>
+</head>
+<body>
+
+  <div class="h">
+    <h1>To do List</h1>
+  </div>
+    <div class="cont">
+      <div class="to-do-list">
+        <table>
+          <div class="forms">
+            <form action="/todo" method="POST">
+              <input type="text" name="item" placeholder="Add items..." required/>
+              <button type="submit">Add Item</button>
+            </form>
+          </div>
+        
+        <ul>
+          <%for(var i=0;i<todos.length;i++){%>
+            <a href="/todo/<%=todos[i]._id%>"><li class="list-item"  ><%=todos[i].item%></li><div class="sample"></div>
+            </a>
+          <%}%>
+        </ul>
+      </table>
+    </div>
+    </div>
+    <script src="todolist.js"></script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 # to-do-app
-It is simple note -making application where we can add and delte notes
+It is simple note-making fullstack application where we can add and delte notes
 
 # to download packages
 npm install
